@@ -1,0 +1,63 @@
+digraph parseTree {
+  ordering=out;
+  node [shape = box, style = filled];
+  n1 [label="program",fillcolor="/x11/pink",shape=box]
+  n2 [label="decl list",fillcolor="/x11/white",shape=box, color=block]
+  n1 -> n2
+  n3 [label="decl: 'A'",fillcolor="/x11/white",shape=box, color=block]
+  n2 -> n3
+  n4 [label="int",fillcolor="/x11/white",shape=box, color=block]
+  n3 -> n4
+  n5 [label="decl: 'B'",fillcolor="/x11/white",shape=box, color=block]
+  n2 -> n5
+  n6 [label="bool",fillcolor="/x11/white",shape=box, color=block]
+  n5 -> n6
+  n7 [label="stmt list",fillcolor="/x11/pink",shape=box]
+  n1 -> n7
+  n8 [label="IF",fillcolor="/x11/white",shape=box, color=block]
+  n7 -> n8
+  n9 [label="B",fillcolor="/x11/blue",shape=box, color=white]
+  n8 -> n9
+  n10 [label="stmt list",fillcolor="/x11/white",shape=box, color=block]
+  n8 -> n10
+  n11 [label="WriteInt",fillcolor="/x11/green",shape=box, color=white]
+  n10 -> n11
+  n12 [label="A",fillcolor="/x11/green",shape=box, color=white]
+  n11 -> n12
+  n13 [label="IF",fillcolor="/x11/pink",shape=box]
+  n7 -> n13
+  n14 [label="B",fillcolor="/x11/blue",shape=box, color=white]
+  n13 -> n14
+  n15 [label="stmt list",fillcolor="/x11/white",shape=box, color=block]
+  n13 -> n15
+  n16 [label="While",fillcolor="/x11/white",shape=box, color=block]
+  n15 -> n16
+  n17 [label="B",fillcolor="/x11/blue",shape=box, color=white]
+  n16 -> n17
+  n18 [label="stmt list",fillcolor="/x11/white",shape=box, color=block]
+  n16 -> n18
+  n19 [label=":=readInt",fillcolor="/x11/green",shape=box, color=white]
+  n18 -> n19
+  n20 [label="A",fillcolor="/x11/green",shape=box, color=white]
+  n19 -> n20
+  n21 [label="stmt list",fillcolor="/x11/pink",shape=box]
+  n13 -> n21
+  n22 [label=":=",fillcolor="/x11/pink",shape=box]
+  n21 -> n22
+  n23 [label="A",fillcolor="/x11/green",shape=box, color=white]
+  n22 -> n23
+  n24 [label=">",fillcolor="/x11/pink",shape=box]
+  n22 -> n24
+  n25 [label="+",fillcolor="/x11/pink",shape=box]
+  n24 -> n25
+  n26 [label="*",fillcolor="/x11/green",shape=box, color=white]
+  n25 -> n26
+  n27 [label="A",fillcolor="/x11/green",shape=box, color=white]
+  n26 -> n27
+  n28 [label="A",fillcolor="/x11/green",shape=box, color=white]
+  n26 -> n28
+  n29 [label="2147483648",fillcolor="/x11/pink",shape=box]
+  n25 -> n29
+  n30 [label="false",fillcolor="/x11/white",shape=box, color=block]
+  n24 -> n30
+}

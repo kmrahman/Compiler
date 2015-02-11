@@ -1,0 +1,37 @@
+digraph parseTree {
+  ordering=out;
+  node [shape = box, style = filled];
+  n1 [label="program",fillcolor="/x11/white",shape=box]
+  n2 [label="PROGRAM",fillcolor="/x11/white",shape=box]
+  n1 -> n2
+  n3 [label="declarations",fillcolor="/x11/white",shape=box]
+  n1 -> n3
+  n4 [label="e",fillcolor="/x11/white",shape=box]
+  n3 -> n4
+  n5 [label="VAL",fillcolor="/x11/white",shape=box]
+  n3 -> n5
+  n6 [label="ident: x",fillcolor="/x11/white",shape=box]
+  n3 -> n6
+  n7 [label="=",fillcolor="/x11/white",shape=box]
+  n3 -> n7
+  n8 [label="[3, 5,6,]",fillcolor="/x11/white",shape=box]
+  n3 -> n8
+  n9 [label="AS",fillcolor="/x11/white",shape=box]
+  n3 -> n9
+  n10 [label="type",fillcolor="/x11/white",shape=box]
+  n3 -> n10
+  n11 [label="list",fillcolor="/x11/white",shape=box]
+  n3 -> n11
+  n12 [label=";",fillcolor="/x11/white",shape=box]
+  n3 -> n12
+  n13 [label="declarations",fillcolor="/x11/white",shape=box]
+  n3 -> n13
+  n14 [label="BEGIN",fillcolor="/x11/white",shape=box]
+  n1 -> n14
+  n15 [label="statementSequence",fillcolor="/x11/white",shape=box]
+  n1 -> n15
+  n16 [label="e",fillcolor="/x11/white",shape=box]
+  n15 -> n16
+  n17 [label="END",fillcolor="/x11/white",shape=box]
+  n1 -> n17
+}
